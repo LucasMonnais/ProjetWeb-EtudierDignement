@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ÉTUDIER DIGNEMENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <img src="../images/logo.png" alt="Logo Précarité Étudiante" class="logo">
+        <h1>ÉTUDIER DIGNEMENT</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="objectifs.html">Nos Objectifs</a></li>
+            <li><a href="jeu.html">Mini-jeu</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="apropos.html">A Propos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-intro">
+        <h2>Rejoignez notre mouvement</h2>
+        <p>Vous souhaitez contribuer à la lutte contre la précarité étudiante ? Remplissez le formulaire ci-dessous pour adhérer à notre cause, nous faire part de vos idées ou partager votre témoignage.</p>
+    </section>
+
+    <section class="contact-form-container">
+        <div class="contact-info">
+            <h3>Nos coordonnées</h3>
+            <div class="info-item">
+                <p>123 Avenue des Étudiants, 75000 Paris</p>
+            </div>
+            <div class="info-item">
+                <p>contact@precarite-etudiante.org</p>
+            </div>
+            <div class="info-item">
+                <p>01 23 45 67 89</p>
+            </div>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="nom">Nom <span class="required">*</span></label>
+                <input type="text" id="nom" name="nom">
+                <span class="error-message" id="nom-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Prénom <span class="required">*</span></label>
+                <input type="text" id="prenom" name="prenom">
+                <span class="error-message" id="prenom-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email">
+                <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone">
+                <span class="error-message" id="telephone-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="statut">Statut <span class="required">*</span></label>
+                <select id="statut" name="statut">
+                    <option value="">Sélectionnez votre statut</option>
+                    <option value="etudiant">Étudiant</option>
+                    <option value="ancien_etudiant">Ancien étudiant</option>
+                    <option value="parent">Parent d'étudiant</option>
+                    <option value="enseignant">Enseignant</option>
+                    <option value="autre">Autre</option>
+                </select>
+                <span class="error-message" id="statut-error"></span>
+            </div>
+
+            <div class="form-group" id="etablissement-container" >
+                <label for="etablissement">Établissement</label>
+                <input type="text" id="etablissement" name="etablissement">
+            </div>
+
+            <div class="form-group">
+                <label for="sujet">Sujet <span class="required">*</span></label>
+                <select id="sujet" name="sujet">
+                    <option value="">Sélectionnez un sujet</option>
+                    <option value="adhesion">Je souhaite adhérer</option>
+                    <option value="temoignage">Je souhaite partager mon témoignage</option>
+                    <option value="proposition">J'ai une proposition</option>
+                    <option value="question">J'ai une question</option>
+                    <option value="autre">Autre</option>
+                </select>
+                <span class="error-message" id="sujet-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <span class="error-message" id="message-error"></span>
+                <div class="character-count">
+                    <span id="char-count">0</span>/500 caractères
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <span class="checkmark"></span>
+                    Je souhaite m'inscrire à la newsletter
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="conditions" name="conditions">
+                    <span class="checkmark"></span>
+                    J'accepte les conditions d'utilisation <span class="required">*</span>
+                </label>
+                <span class="error-message" id="conditions-error"></span>
+            </div>
+
+            <div class="form-buttons">
+                <button type="reset" class="btn btn-reset">Réinitialiser</button>
+                <button type="submit" class="btn btn-submit">Envoyer</button>
+            </div>
+        </form>
+    </section>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+
+            <h3>Formulaire envoyé avec succès!</h3>
+            <p>Merci pour votre message. Nous vous contacterons prochainement.</p>
+            <button id="modal-close-btn" class="btn">Fermer</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Précarité Étudiante</h3>
+            <p>Un projet dédié à la sensibilisation et à la lutte contre la précarité des étudiants en France.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="objectifs.html">Nos Objectifs</a></li>
+                <li><a href="jeu.html">Mini-jeu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">A Propos</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 ÉTUDIER DIGNEMENT | <a href="contact.html">À propos de nous</a></p>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

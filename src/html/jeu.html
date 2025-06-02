@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Jeu : Prison ou CROUS? | ÉTUDIER DIGNEMENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <img src="../images/logo.png" alt="Logo du site" class="logo">
+        <h1>ÉTUDIER DIGNEMENT</h1>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="jeu.html" class="active">Mini-Jeu</a></li>
+            <li><a href="objectifs.html">Objectifs & Précarité</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="apropos.html">A Propos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="game-intro">
+        <h2>Prison ou CROUS ?</h2>
+        <p>Ce jeu vise à sensibiliser sur les conditions de logement des étudiants en France. Êtes-vous capable de distinguer une chambre de prison d'une chambre de résidence universitaire (CROUS) ?</p>
+        <p>Regardez attentivement l'image et choisissez : s'agit-il d'une cellule de prison ou d'une chambre étudiante ? Le résultat pourrait vous surprendre...</p>
+        <button id="start-game" class="btn primary">Commencer le jeu</button>
+    </section>
+
+    <section class="game-container" id="game-area" style="display: none;">
+        <h2>Prison ou CROUS ?</h2>
+        <div class="game-info">
+            <div class="score-board">
+                <span>Score: <span id="score">0</span> / <span id="total-questions">0</span></span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="game-display">
+            <img id="game-image" src="/" alt="Image à deviner" class="game-image">
+            <div class="game-options">
+                <button id="prison-btn" class="btn">Prison</button>
+                <button id="crous-btn" class="btn">CROUS</button>
+            </div>
+        </div>
+
+        <div id="result-display" class="result-container" style="display: none;">
+            <div id="result-message" class="result-message"></div>
+            <div id="result-explanation" class="result-explanation"></div>
+            <button id="next-question" class="btn secondary">Question suivante</button>
+        </div>
+    </section>
+
+    <section class="game-end" id="game-end" style="display: none;">
+        <h2>Fin du jeu</h2>
+        <div id="game-conclusion"></div>
+        <button id="restart-game" class="btn primary">Rejouer</button><br><br>
+        <a href="objectifs.html" class="btn primary">En savoir plus sur la précarité étudiante</a>
+    </section>
+
+    <section>
+        <h2>Une réalité alarmante</h2>
+        <p>Ce jeu illustre une triste réalité : les conditions de logement de nombreux étudiants en France sont parfois comparables à celles des prisons. Exiguïté, insalubrité, isolation thermique défaillante... autant de problèmes qui impactent directement la santé et la réussite académique des étudiants.</p>
+        <div class="quote">
+            <blockquote>"J'ai l'impression de vivre dans une cellule. 9m², une douche qui fuit, des murs qui s'effritent... Comment se concentrer sur ses études dans ces conditions ?"</blockquote>
+            <cite class="quote-author">- Témoignage d'un étudiant en résidence CROUS</cite>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Précarité Étudiante</h3>
+            <p>Un projet dédié à la sensibilisation et à la lutte contre la précarité des étudiants en France.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="objectifs.html">Nos Objectifs</a></li>
+                <li><a href="jeu.html">Mini-jeu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">A Propos</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 ÉTUDIER DIGNEMENT | <a href="contact.html">À propos de nous</a></p>
+    </div>
+</footer>
+</body>
+</html>
